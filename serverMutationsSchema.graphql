@@ -10,5 +10,5 @@ type Mutation {
     storeProduct(product: productStore): product
     updateProduct(product: productUpdate): product
     deleteProduct(id: ID!): product
-    shipOrder(id: ID!, shipped: Boolean): order
+    shipOrder(id: ID!, shipped: Boolean!): order
 }

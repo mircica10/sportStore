@@ -23,9 +23,7 @@ export class OrdersTable extends Component {
                 <tbody>
                     { this.props.orders.map(order => 
                         <OrdersRow key = {order.id} order = {order} 
-                            toggleShip={ () =>
-                                this.props.toggleShip(order.id, !order.shipped)        
-                            }
+                            toggleShipped={ () => this.props.toggleShipped(order.id, !order.shipped) }
                         />
                     )}
                 </tbody>
