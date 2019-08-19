@@ -14,7 +14,7 @@ export class ValidatedForm extends Component {
 
     handleSubmit = () => {
         this.setState(state => {
-            const newState = {...state, validationErrors: {}}
+            const newState = {...state, validationErrors: {} }
             Object.values(this.formElements).forEach(elem => {
                 if(!elem.checkValidity()) {
                     newState.validationErrors[elem.name] = GetMessages(elem);
@@ -24,7 +24,9 @@ export class ValidatedForm extends Component {
         }, () => {
             if (Object.keys(this.state.validationErrors).length === 0) {
                 const data = Object.assign(...Object.entries(this.formElements)
-                    .map(e => ({[e[0]]:e[1].value})) )
+                    .map(e => ({
+                                    [e[0]]: e[1].value
+                                })) )
                 this.props.submitCallback(data);
             }
         });
