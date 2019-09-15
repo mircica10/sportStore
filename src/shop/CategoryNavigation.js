@@ -17,7 +17,7 @@ export class CategoryNavigation extends Component {
         </ToggleLink>
         )}
         <Link className="btn btn-block btn-secondary fixed-bottom m-2 col-3"
-            to="admin">
+            to="/admin">
                 Administration
             </Link>
     </React.Fragment>
